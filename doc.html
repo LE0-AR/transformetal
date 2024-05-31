@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Organizational Chart</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e0f7fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .chart-container {
+        width: 90%;
+        max-width: 1200px;
+      }
+      .chart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .level {
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        position: relative;
+      }
+      .node {
+        background-color: #fff;
+        border: 2px solid #1976d2;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 0 10px;
+        position: relative;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+      .node:hover {
+        transform: scale(1.05);
+      }
+      .node span {
+        display: block;
+        color: #1976d2;
+        font-weight: bold;
+      }
+      .line {
+        position: absolute;
+        height: 2px;
+        width: calc(100% - 40px);
+        background-color: #1976d2;
+        top: 50%;
+        left: calc(
+          50% + 50px
+        ); /* Inicio desde el centro del nodo del gerente */
+        transform: translateY(-50%);
+        z-index: -1; /* Para colocar la línea detrás de los nodos */
+      }
+      .line-horizontal {
+        position: absolute;
+        height: 2px;
+        background-color: #1976d2;
+        top: 50%;
+        left: calc(
+          50% + 150px
+        ); /* Ajusta el valor para conectar los nodos de los departamentos */
+        transform: translateY(-50%);
+        z-index: -1; /* Para colocar la línea detrás de los nodos */
+      }
+      
+      .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        border: 2px solid #1976d2;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        display: none;
+      }
+      .popup img {
+        max-width: 100px;
+        margin-bottom: 20px;
+      }
+      .popup span {
+        display: block;
+        color: #1976d2;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .close-btn {
+        background-color: #1976d2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .close-btn:hover {
+        background-color: #005bb5;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .level {
+          flex-direction: column;
+        }
+        .node {
+          margin: 10px 0;
+        }
+        .line {
+          width: calc(100% - 20px);
+          left: 10px;
+        }
+        .line-horizontal {
+          width: calc(100% - 20px);
+          left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chart-container">
+      <div class="chart">
+        <div class="level">
+          <div
+            class="node"
+            onclick="showPopup('Manager Name', 'Manager Position', 'assets/doc/0.png')"
+          >
+            <span>Nombre</span>
+            Ingeniero
+            <div class="line"></div>
+          </div>
+        </div>
+        <div class="level">
+          <div
+            class="node"
+            onclick="showPopup('Department Head 1', 'Department 1', 'path/to/image1.png')"
+          >
+            <span>Department Head 1</span>
+            Department 1
+          </div>
+          <div
+            class="node"
+            onclick="showPopup('Department Head 2', 'Department 2', 'path/to/image2.png')"
+          >
+            <span>Department Head 2</span>
+            Department 2
+          </div>
+          <div
+            class="node"
+            onclick="showPopup('Department Head 3', 'Department 3', 'path/to/image3.png')"
+          >
+            <span>Department Head 3</span>
+            Department 3
+          </div>
+          <div
+            class="node"
+            onclick="showPopup('Department Head 4', 'Department 4', 'path/to/image4.png')"
+          >
+            <span>Department Head 4</span>
+            Department 4
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <img id="popup-img" src="" alt="Profile Image" />
+      <span id="popup-name"></span>
+      <span id="popup-position"></span>
+      <button class="close-btn" onclick="hidePopup()">Close</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      function showPopup(name, position, imgSrc) {
+        $("#popup-name").text(name);
+        $("#popup-position").text(position);
+        $("#popup-img").attr("src", imgSrc);
+        $("#popup").fadeIn(500);
+      }
+
+      function hidePopup() {
+        $("#popup").fadeOut(500);
+      }
+    </script>
+  </body>
+</html>
