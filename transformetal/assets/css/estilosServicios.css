@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+section {
+  margin-bottom: 130px; /* Espacio entre cada sección */
+}
+.container__cover{
+    width: 100%;
+    height: 800px;
+    margin: 150px 0px;
+}
+
+.cover{
+    max-width: 1200px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container__cover .text{
+    max-width: 400px;
+}
+
+.container__cover .text h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.container__cover .text p{
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+.container__cover .text input{
+    padding: 18px 80px;
+    border: none;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 40px;
+    background:  linear-gradient(0deg, rgba(249,86,9,1) 0%, rgba(80,34,15,1) 100%);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 30px -12px #f54d4d;
+    transition: all 300ms;
+}
+
+.container__cover .text input:hover{
+    box-shadow: 1px 1px 30px -6px #f54d4d;
+}
+
+
+.container__cover .svg img{
+    width: 600px;
+    animation: move-vector 4s linear infinite;
+}
+
+@keyframes move-vector {
+    0%{
+        transform: translateY(15px);
+    }50%{
+        transform: translateY(0px);
+    }100%{
+        transform: translateY(15px);
+    }
+}
+
+@media (max-width: 768px) {
+  .cover {
+       flex-direction: column;
+       align-items: center;
+   }
+
+  .container__cover.text {
+       max-width: 100%;
+   }
+
+  .container__cover.text h1 {
+       font-size: 24px;
+   }
+
+  .container__cover.text p {
+       font-size: 14px;
+       margin-top: 20px;
+   }
+
+  .container__cover.text input {
+       padding: 12px 60px;
+   }
+}
+
+
+ /*Secion de diseño*/
+ 
+ #personalizado {
+  padding-top: 140px; /* Ajusta este valor según sea necesario para mover la sección hacia abajo */
+}
+
+.contain {
+  
+  width: 1000px;
+  margin: 0 auto;
+  background: white;
+  overflow: hidden;
+  border: 1px solid #cecaca;
+  border-top-width: 0;
+}
+
+
+.logo-text {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.header h2 {
+  color: white;
+  position: relative;
+  font-size: 30px;
+}
+
+.header img {
+  width: 110px;
+  position: relative;
+}
+
+.content {
+  margin: 30px 60px;
+}
+
+.content .formulario p {
+  color: #000;
+  text-align: justify;
+  font-size: 2rem;
+}
+
+.content label {
+  display: block;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.form-contact {
+  margin-top: 20px;
+}
+
+.controls {
+  width: 400px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: sans-serif;
+  border: 1px solid #cecaca;
+  background: #f1f1f1;
+  padding: 14px 12px;
+  margin: 8px 0;
+}
+
+.files {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  background: black;
+  border: none;
+  color: white;
+  font-size: 18px;
+  display: block;
+  margin: auto;
+  padding: 20px 60px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/********************************
+Cortes
+*********************************/
+.contenedor {
+  width: 70%;
+  height: 70%;
+  background-image: linear-gradient(90deg, #000000, #00000020);
+  border-radius: 40px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  margin: 150px auto; /* auto para centrar horizontalmente */
+
+  /* Agregar efecto de ondulación */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+  /* Agregar borde negro */
+  border: 2px solid black;
+}
+
+.formulario{
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.contenedor-video {
+  width: 45%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.video{
+  max-width: 700px;
+  border-radius: 40px;
+  border: 2px solid #f95609;
+  margin: auto;
+  display: block;
+  
+}
+.contenedor h3{
+  color: #353535;
+  margin-bottom: 10px;
+}
+.contenedor h2{
+  font-weight: normal;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  margin-bottom: 10px;
+}
+.contenedor p{
+  color: #878787;
+}
+.contenedor p a{
+  color:#ff5b31;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 10px;
+}
+.contenedor form{
+  margin-top: 50px;
+}
+.contenedor form .entrada{
+  background-color: #353535;
+  border-radius: 50px;
+  padding: 10px 25px;
+  margin-bottom: 20px;
+}
+.contenedor form .entrada label{
+  display: block;
+  color: #878787;
+  font-size: 14px;
+  line-height: 14px;
+}
+.contenedor form .entrada input{
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+}
+.contenedor .btn{
+  background-color: #ff5b31;
+  border: none;
+  padding: 10px 25px;
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+/* seccion responsive */
+@media screen and (max-width:900px) {
+  body{
+      height: auto;
+  }
+  .contenedor{
+      display: block;
+      height: auto;
+  }
+  .formulario{
+      width: 100%;
+  }
+  .contenedor-video{
+      width: 90%;
+  }
+  .video{
+      width: 90%;
+      margin-top: 20px;
+  }
+}

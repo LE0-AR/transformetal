@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRANSFORMETAL</title>
+    <link rel="stylesheet" href="assets/css/styleProducts.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.5.2/css/all.css"
+    />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+    <script>
+      $(document).ready(function () {
+        $("#headContent").load(
+          "index.html #header",
+          function (response, status, xhr) {
+            if (status == "error") {
+              console.log(
+                "Error loading header: " + xhr.status + " " + xhr.statusText
+              );
+            }
+          }
+        );
+      });
+    </script>
+  </head>
+  <body>
+    <div id="headContent"></div>
+
+    <section id="gabinete">
+        <div class="area">
+          <div class="profile">
+            <div class="profile-info">
+              <h2>Gabinetes</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ex,
+                perferendis numquam, provident facilis nemo corrupti unde itaque,
+                asperiores maiores et dignissimos sed tenetur nisi rem voluptate
+                vitae. Sint, aut?
+              </p>
+            </div>
+          </div>
+        </div>
+        <!--Conetdio menu-->
+        <div class="main-container">
+          <div class="categories">
+              <h2>Categorias</h2>
+              <div class="category-list">
+                  <h3>Gabinetes</h3>
+                  <ul>
+                      <li>
+                          <a href="#" class="has-submenu">Gab1</a>
+                          <ul class="submenu">
+                              <li><a href="#">SubGab1</a></li>
+                              <li><a href="#">SubGab2</a></li>
+                              <li><a href="#">SubGab3</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="has-submenu">Gab2</a>
+                          <ul class="submenu">
+                              <li><a href="#">SubGab1</a></li>
+                              <li><a href="#">SubGab2</a></li>
+                              <li><a href="#">SubGab3</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="has-submenu">Gab3</a>
+                          <ul class="submenu">
+                              <li><a href="#">SubGab1</a></li>
+                              <li><a href="#">SubGab2</a></li>
+                              <li><a href="#">SubGab3</a></li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="#" class="has-submenu">Gab4</a>
+                          <ul class="submenu">
+                              <li><a href="#">SubGab1</a></li>
+                              <li><a href="#">SubGab2</a></li>
+                              <li><a href="#">SubGab3</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+        <!--Fin COntenido-->
+      <div class="contenido">
+        <div class="product-list" style="max-width: 950px">
+          <h2 style="padding: 5px; margin: auto">Productos</h2>
+          <!--Inicio-->
+          <div class="product-item">
+            <img
+              src="assets/img/gabinete/gabineteI 1.png"
+              alt="Antena Yagi"
+              style="max-width: 200px; max-height: 200px"
+            />
+            <div>
+              <a href="#product1" onclick="showDetails('product1-details')">
+                <h3 style="font-size: 15px">
+                  07-CAJA OUTDOOR CON PARRILLAS, MONTAJE EN POSTE 22/40/50 cms
+                </h3>
+              </a>
+              <p>CJO-PR-VV-40/22/50/C-21-01-RM</p>
+            </div>
+            <center>
+              <button onclick="showDetails('product1-details')">
+                Mostrar Detalles
+              </button>
+            </center>
+            <div id="product1-details" class="details">
+              <section class="product-details-wrapper">
+                <div class="product-details">
+                  <center>
+                    <div class="card-wrapper">
+                      <div class="card">
+                        <button
+                          class="close-btn"
+                          onclick="hideDetails('product1-details')"
+                        >
+                          Cerrar
+                        </button>
+                        <div class="product-imgs" id="gabineteI">
+                          <div class="img-display">
+                            <div class="img-showcase">
+                              <img
+                                src="assets/img/gabinete/gabineteI 1.png"
+                                alt="gab1 image"
+                              />
+                              <img
+                                src="assets/img/gabinete/gabineteI 2.png"
+                                alt="gab2 image"
+                              />
+                              <img
+                                src="assets/img/gabinete/gabineteI 3.png"
+                                alt="shoe image"
+                              />
+                              <img
+                                src="assets/img/gabinete/gabineteI 4.png"
+                                alt="shoe image"
+                              />
+                            </div>
+                          </div>
+                          <div class="img-select">
+                            <div class="img-item">
+                              <a href="#" data-id="1">
+                                <img
+                                  src="assets/img/gabinete/gabineteI 1.png"
+                                  alt="shoe image"
+                                />
+                              </a>
+                            </div>
+                            <div class="img-item">
+                              <a href="#" data-id="2">
+                                <img
+                                  src="assets/img/gabinete/gabineteI 2.png"
+                                  alt="shoe image"
+                                />
+                              </a>
+                            </div>
+                            <div class="img-item">
+                              <a href="#" data-id="3">
+                                <img
+                                  src="assets/img/gabinete/gabineteI 3.png"
+                                  alt="shoe image"
+                                />
+                              </a>
+                            </div>
+                            <div class="img-item">
+                              <a href="#" data-id="4">
+                                <img
+                                  src="assets/img/gabinete/gabineteI 4.png"
+                                  alt="shoe image"
+                                />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="product-content">
+                          <h2 class="product-title">Gabinete 1</h2>
+                          <div class="product-detail">
+                            <h2>Descripcion:</h2>
+                            <p style="text-align: justify; font-size: 13px">
+                              Lorem ipsum, dolor sit amet consectetur
+                              adipisicing elit. Reprehenderit doloribus, quas
+                              magni rem iste harum debitis a iusto inventore
+                              illo omnis quod quaerat maxime error,
+                              consequuntur, voluptates fugiat beatae est?
+                            </p>
+                            <ul style="font-size: 15px">
+                              <li>
+                                <i class="fa-solid fa-check"></i>Menu 1:
+                                <span>1</span>
+                              </li>
+                              <li>
+                                <i class="fa-solid fa-check"></i>Menu 2:
+                                <span>2</span>
+                              </li>
+                              <li>
+                                <i class="fa-solid fa-check"></i>Menu 3:
+                                <span>3</span>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="purchase-info">
+                            <button type="button" class="btn">
+                              Ficha técnica
+                            </button>
+                          </div>
+                          <div class="social-links">
+                            <p>Contáctenos</p>
+                            <a
+                              href="https://wa.me/50237895723?text=%C2%A1Hola!%20Estoy%20interesado%20en%20el%20Producto%20ABC%20que%20vi%20en%20tu%20p%C3%A1gina.%20Para%20m%C3%A1s%20detalles,%20por%20favor%20revisa%20este%20enlace:%20https%3A%2F%2Fwww.tessco.com%2Fproduct%2F902-960-mhz-10dbd-yagi-antenna-527652"
+                              target="_blank"
+                            >
+                              <i
+                                class="fab fa-whatsapp"
+                                style="font-size: 13px"
+                              ></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </center>
+                </div>
+              </section>
+            </div>
+          </div>
+          <!--Info fin -->
+        </div>
+      </div>
+    </section>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

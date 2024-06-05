@@ -1,0 +1,513 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+#header {
+  position: relative;
+}
+
+.contenido {
+  position: relative;
+  padding-top: 70px; /* Ajusta el padding superior para que el contenido no se superponga con el encabezado */
+  z-index: 100; /* Un valor alto para asegurar que el encabezado esté por encima de otros elementos */
+}
+
+h1 {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 700;
+  margin-top: 0px; /* Ajusta este valor según sea necesario */
+  text-align: center;
+  letter-spacing: 4px;
+  line-height: 23px;
+}
+.process-wrapper {
+  margin: auto;
+  max-width: 1080px;
+}
+
+#progress-bar-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+}
+
+#progress-bar-container ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+}
+
+#progress-bar-container li:before {
+  content: " ";
+  display: block;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px #aaa;
+  transition: all ease 0.3s;
+}
+
+#progress-bar-container li.active:before,
+#progress-bar-container li:hover:before {
+  border: solid 2px #fff;
+
+  background: linear-gradient(to right, #f95609 0%, #000000 100%);
+}
+
+#progress-bar-container li {
+  list-style: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.2s;
+  vertical-align: bottom;
+  height: 60px;
+  position: relative;
+}
+
+#progress-bar-container li .step-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+  color: #9e0a0a;
+}
+
+#progress-bar-container li:after {
+  content: " ";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #777;
+  margin: auto;
+  border: solid 7px #fff;
+  border-radius: 50%;
+  margin-top: 40px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+#progress-bar-container li:hover:after {
+  background: #555;
+}
+
+#progress-bar-container li.active:after {
+  background: #932020;
+}
+
+#progress-bar-container #line {
+  width: 80%;
+  margin: auto;
+  background: #eee;
+  height: 6px;
+  position: absolute;
+  left: 10%;
+  top: 57px;
+  z-index: 1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+  content: " ";
+  width: 3%;
+  height: 100%;
+  background: #207893;
+  background: linear-gradient(to right, #f95609 0%, #000000 100%);
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-content-section {
+  width: 85%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 2%;
+  border: 1px solid #000000;
+  padding: 0;
+}
+
+#progress-content-section .section-content {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+#progress-content-section .section-content h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+#progress-content-section .section-content p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #000000;
+  text-align: justify;
+}
+
+#progress-content-section .section-content {
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+#progress-content-section .section-content.active {
+  display: block;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Mision*/
+
+.mision {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-item {
+  width: 300px;
+  margin: 1rem;
+  position: relative;
+  border-radius: 8px;
+  background: white;
+  padding-bottom: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(87, 84, 84, 0.328);
+}
+
+.card-item:hover {
+  transform: rotate(1deg);
+  box-shadow: 0 20px 40px rgba(16, 14, 14, 0.5);
+}
+
+.image {
+  width: 300px;
+  height: 200px;
+  border-radius: 8px;
+  position: relative;
+  transition: all 0.5s;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image3 {
+  background-image: url("https://coworkingfy.com/wp-content/uploads/2020/03/M%C3%A9todos-para-definir-objetivos.jpg");
+}
+
+.image4 {
+  background-image: url("https://i.pinimg.com/564x/40/92/82/40928222081f4b03f21e55091732e559.jpg  ");
+  width: 100%;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.title {
+  margin: 1rem 0;
+  color: #e65b00;
+  font-size: 2rem;
+}
+.title .valor{
+	justify-content: center;
+	align-items: center;
+	position: flex;
+	padding: 5px;
+}
+.mision p {
+  font-size: 14px;
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  color: rgb(0, 0, 0);
+  text-align: justify;
+}
+
+.button {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 18px;
+  text-decoration: none;
+  background-color: #e65b00;
+}
+.button:hover {
+  background-color: #a71d04;
+}
+
+/*Staff*/
+
+.staff {
+  margin-top: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.staff-content {
+  border: 1px solid #000;
+  width: 100%;
+  max-width: 750px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5%;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.card__content {
+  padding: 15px;
+  font-size: 14px;
+  text-align: justify;
+}
+.card__image {
+  max-width: 100%;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.card__image:hover {
+  transform: scale(1.03);
+}
+
+.zoomed-image-container {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.zoomed-image-container .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zoomed-image-container img {
+  max-width: 70%;
+  max-height: 70%;
+}
+@media (max-width: 600px) {
+  .staff {
+    margin-top: 320%;
+    width: 100%; /* Asegura que la tarjeta ocupe todo el ancho disponible */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .staff-content {
+    width: 48%; /* Ajuste para tarjetas de tamaño medio */
+  }
+}
+
+#equipo {
+  background: linear-gradient(
+    0deg,
+    rgb(214, 213, 213) 9%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  padding: 20px;
+  margin-top: 60px;
+}
+/*Organigrama*/
+.organigrama {
+  width: 100%;
+  height: 100%;
+  margin-top: 75px;
+}
+
+.tree {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.tree ul {
+  padding-top: 20px;
+  position: relative;
+  transition: .5s;
+}
+
+.tree li {
+  display: inline-table;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 10px;
+  transition: .5s;
+}
+
+.tree li::before, .tree li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 51%;
+  height: 10px;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.tree li a {
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: inline-grid;
+  border-radius: 5px;
+  text-decoration-line: none;
+  border-radius: 5px;
+  transition: .5s;
+}
+
+.tree li a img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px !important;
+  border-radius: 100px;
+  margin: auto;
+}
+
+.tree li a span {
+  border: 1px solid #333232;
+  border-radius: 5px;
+  color: #282626;
+  padding: 8px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+/*Hover-Section*/
+.tree li a:hover, .tree li a:Hover,.tree li a:hover i, .tree li a:hover span, .tree li a:hover+ul li a {
+  background: #ffce9e;
+  color: #000;
+  border: 1px solid #000000;
+}
+
+.tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
+  border-color: #94a0b4;
+}
+
+/* Responsivity adjustments */
+@media (max-width: 768px) {
+  .tree ul {
+    padding-top: 10px;
+  }
+  .tree li {
+    padding: 5px;
+  }
+  .tree li a img {
+    width: 40px;
+    height: 40px;
+  }
+  .tree li a span {
+    padding: 6px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tree li {
+    display: block;
+  }
+  .tree li::before, .tree li::after {
+    width: 20%;
+  }
+}
